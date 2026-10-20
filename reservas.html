@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservas - Sabores del Perú</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Encabezado y Navegación Principal -->
+    <header class="header">
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-utensils"></i>
+                <h1>Sabores del Perú</h1>
+            </a>
+            <nav class="nav-tabs">
+                <a href="index.html" class="tab-btn">
+                    <i class="fa-solid fa-house"></i> Inicio
+                </a>
+                <a href="nosotros.html" class="tab-btn">
+                    <i class="fa-solid fa-book-open"></i> Nosotros
+                </a>
+                <a href="menu.html" class="tab-btn">
+                    <i class="fa-solid fa-bowl-food"></i> Menú Semanal
+                </a>
+                <a href="reservas.html" class="tab-btn active">
+                    <i class="fa-solid fa-calendar-check"></i> Reservas
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section id="reservas" class="tab-content active">
+            <div class="section-header">
+                <h2>Reserva Tu Mesa</h2>
+                <p>Asegura tu lugar y vive una experiencia gastronómica sin demoras.</p>
+            </div>
+
+            <div class="reservas-wrapper">
+                <div class="form-container">
+                    <form id="formReserva" class="reserva-form">
+                        <div class="form-group-row">
+                            <div class="form-group">
+                                <label for="nombre"><i class="fa-solid fa-user"></i> Nombre Completo</label>
+                                <input type="text" id="nombre" name="nombre" required placeholder="Ej. Juan Pérez">
+                            </div>
+                            <div class="form-group">
+                                <label for="telefono"><i class="fa-solid fa-phone"></i> Teléfono o WhatsApp</label>
+                                <input type="tel" id="telefono" name="telefono" required placeholder="Ej. 987654321">
+                            </div>
+                        </div>
+
+                        <div class="form-group-row">
+                            <div class="form-group">
+                                <label for="email"><i class="fa-solid fa-envelope"></i> Correo Electrónico</label>
+                                <input type="email" id="email" name="email" required placeholder="tuemail@ejemplo.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="personas"><i class="fa-solid fa-users"></i> Número de Personas</label>
+                                <select id="personas" name="personas" required>
+                                    <option value="1">1 Persona</option>
+                                    <option value="2" selected>2 Personas</option>
+                                    <option value="3 a 4">3 a 4 Personas</option>
+                                    <option value="5 a 6">5 a 6 Personas</option>
+                                    <option value="7 a 10">7 a 10 Personas</option>
+                                    <option value="más de 10">Más de 10 personas (Evento)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group-row">
+                            <div class="form-group">
+                                <label for="fecha"><i class="fa-solid fa-calendar"></i> Fecha de Reserva</label>
+                                <input type="date" id="fecha" name="fecha" required>
+                                <small id="errorFecha" class="error-form" role="alert"></small>
+                            </div>
+                            <div class="form-group">
+                                <label for="hora"><i class="fa-solid fa-clock"></i> Hora</label>
+                                <select id="hora" name="hora" required>
+                                    <option value="12:00">12:00 PM (Almuerzo)</option>
+                                    <option value="13:00">01:00 PM (Almuerzo)</option>
+                                    <option value="14:00">02:00 PM (Almuerzo)</option>
+                                    <option value="15:00">03:00 PM (Almuerzo)</option>
+                                    <option value="19:00">07:00 PM (Cena)</option>
+                                    <option value="20:00">08:00 PM (Cena)</option>
+                                    <option value="21:00">09:00 PM (Cena)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="comentarios"><i class="fa-solid fa-comment-dots"></i> Petición Especial / Ocasión</label>
+                            <textarea id="comentarios" name="comentarios" rows="3" placeholder="¿Cumpleaños, aniversario, mesa preferida en terraza o salón? Cuéntanos aquí..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block">
+                            <i class="fa-solid fa-check-circle"></i> Confirmar Mi Reserva
+                        </button>
+                    </form>
+
+                    <!-- Mensaje dinámico de confirmación -->
+                    <div id="mensajeConfirmacion" class="mensaje-exito oculto">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <h3>¡Reserva Recibida con Éxito!</h3>
+                        <p id="detallesReserva"></p>
+                        <button type="button" id="btnOtraReserva" class="btn btn-secondary">Hacer otra reserva</button>
+                    </div>
+                </div>
+
+                <div class="info-reserva-card">
+                    <h3>Información Importante</h3>
+                    <ul>
+                        <li><i class="fa-solid fa-bell"></i> <strong>Tolerancia:</strong> 15 minutos a partir de la hora pactada.</li>
+                        <li><i class="fa-solid fa-champagne-glasses"></i> <strong>Eventos:</strong> Para más de 10 personas comunícate directamente por teléfono.</li>
+                        <li><i class="fa-solid fa-car"></i> <strong>Estacionamiento:</strong> Contamos con cochera privada y valet parking de cortesía.</li>
+                        <li><i class="fa-solid fa-credit-card"></i> <strong>Métodos de Pago:</strong> Todas las tarjetas de crédito/débito, Yape, Plin y efectivo.</li>
+                    </ul>
+                    <div class="contacto-directo">
+                        <h4>¿Dudas urgentes?</h4>
+                        <p><i class="fa-brands fa-whatsapp"></i> WhatsApp Reservas: <strong>+51 987 654 321</strong></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de Página -->
+    <footer class="footer">
+        <div class="footer-container">
+            <p>&copy; 2026 Sabores del Perú - Todos los derechos reservados. Cocina con orgullo e identidad.</p>
+            <div class="sociales">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

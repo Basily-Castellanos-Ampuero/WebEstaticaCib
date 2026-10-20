@@ -1,0 +1,775 @@
+/* ========================================================
+   SABORES DEL PERÚ - HOJA DE ESTILOS
+   Estructura limpia, colores peruanos cálidos y elegantes
+======================================================== */
+
+:root {
+    --rojo-peru: #B71C1C;
+    --rojo-claro: #D32F2F;
+    --dorado: #C68B59;
+    --dorado-claro: #F5EBE0;
+    --oscuro: #1A1A1A;
+    --texto: #333333;
+    --texto-suave: #666666;
+    --fondo-gris: #FBF8F5;
+    --blanco: #FFFFFF;
+    --sombra: 0 8px 24px rgba(0, 0, 0, 0.08);
+    --sombra-fuerte: 0 12px 30px rgba(0, 0, 0, 0.15);
+    --radio: 12px;
+    --transicion: all 0.3s ease-in-out;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--texto);
+    background-color: var(--fondo-gris);
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+    color: var(--oscuro);
+}
+
+/* ========================================================
+   HEADER & NAVEGACIÓN POR PESTAÑAS (TABS)
+======================================================== */
+.header {
+    background-color: var(--blanco);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--rojo-peru);
+}
+
+.logo i {
+    font-size: 1.8rem;
+}
+
+.logo h1 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.nav-tabs {
+    display: flex;
+    gap: 0.5rem;
+    background: #F1ECE6;
+    padding: 0.35rem;
+    border-radius: 50px;
+}
+
+.tab-btn {
+    background: transparent;
+    border: none;
+    padding: 0.65rem 1.25rem;
+    border-radius: 50px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--texto-suave);
+    cursor: pointer;
+    transition: var(--transicion);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.tab-btn:hover {
+    color: var(--rojo-peru);
+}
+
+.tab-btn.active {
+    background: var(--rojo-peru);
+    color: var(--blanco);
+    box-shadow: 0 4px 12px rgba(183, 28, 28, 0.3);
+}
+
+/* ========================================================
+   CONTENEDORES DE SECCIÓN (TABS QUE ABREN EN LA MISMA VENTANA)
+======================================================== */
+.main-content {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+    min-height: 70vh;
+}
+
+.tab-content {
+    display: none;
+    animation: fadeIn 0.4s ease;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.section-header h2 {
+    font-size: 2.4rem;
+    color: var(--rojo-peru);
+    margin-bottom: 0.5rem;
+}
+
+.section-header p {
+    color: var(--texto-suave);
+    font-size: 1.05rem;
+}
+
+/* ========================================================
+   SECCIÓN 1: INICIO
+======================================================== */
+.hero-banner {
+    background-image: linear-gradient(135deg, rgba(26,26,26,0.88), rgba(183,28,28,0.85)), url("https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1600&q=80");
+    background-size: cover;
+    background-position: center;
+    border-radius: var(--radio);
+    color: var(--blanco);
+    padding: 4rem 3rem;
+    text-align: center;
+    box-shadow: var(--sombra);
+    margin-bottom: 2.5rem;
+}
+
+.hero-text h2 {
+    color: var(--blanco);
+    font-size: 2.8rem;
+    margin: 1rem 0;
+    line-height: 1.2;
+}
+
+.hero-text p {
+    font-size: 1.15rem;
+    max-width: 750px;
+    margin: 0 auto 2rem;
+    color: #E0E0E0;
+}
+
+.badge {
+    background: var(--dorado);
+    color: var(--blanco);
+    padding: 0.4rem 1.2rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.hero-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 0.8rem 1.8rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    transition: var(--transicion);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-primary {
+    background: var(--rojo-peru);
+    color: var(--blanco);
+}
+
+.btn-primary:hover {
+    background: var(--rojo-claro);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(183, 28, 28, 0.4);
+}
+
+.btn-secondary {
+    background: var(--blanco);
+    color: var(--oscuro);
+}
+
+.btn-secondary:hover {
+    background: var(--dorado-claro);
+    color: var(--rojo-peru);
+    transform: translateY(-2px);
+}
+
+.btn-block {
+    width: 100%;
+    justify-content: center;
+    padding: 1rem;
+    font-size: 1.05rem;
+}
+
+.destacados-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.card-destacado {
+    background: var(--blanco);
+    padding: 2.5rem 1.8rem;
+    border-radius: var(--radio);
+    text-align: center;
+    box-shadow: var(--sombra);
+    transition: var(--transicion);
+    border-bottom: 4px solid transparent;
+}
+
+.card-destacado:hover {
+    transform: translateY(-5px);
+    border-bottom: 4px solid var(--rojo-peru);
+}
+
+.card-destacado .icon {
+    font-size: 2.5rem;
+    color: var(--rojo-peru);
+    margin-bottom: 1rem;
+}
+
+.card-destacado h3 {
+    margin-bottom: 0.75rem;
+    font-size: 1.3rem;
+}
+
+/* ========================================================
+   SECCIÓN 2: NOSOTROS / DESCRIPCIÓN DEL RESTAURANTE
+======================================================== */
+.about-container {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 2.5rem;
+    align-items: center;
+}
+
+.about-text p {
+    margin-bottom: 1.2rem;
+    font-size: 1.05rem;
+}
+
+.about-highlights {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.highlight-item {
+    background: var(--blanco);
+    padding: 1.2rem;
+    border-radius: var(--radio);
+    box-shadow: var(--sombra);
+}
+
+.highlight-number {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--rojo-peru);
+    font-family: 'Playfair Display', serif;
+}
+
+.highlight-desc {
+    font-size: 0.85rem;
+    color: var(--texto-suave);
+}
+
+.info-adicional {
+    background: #FAF0E6;
+    padding: 1.5rem;
+    border-radius: var(--radio);
+    border-left: 5px solid var(--dorado);
+}
+
+.info-adicional p {
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.about-image-card {
+    background: var(--blanco);
+    padding: 1.5rem;
+    border-radius: var(--radio);
+    box-shadow: var(--sombra);
+}
+
+.quote-box {
+    margin-top: 1.5rem;
+    font-style: italic;
+    color: var(--texto-suave);
+    text-align: center;
+}
+
+/* ========================================================
+   SECCIÓN 3: MENÚ (LUNES A DOMINGO)
+======================================================== */
+.dias-nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.dia-btn {
+    background: var(--blanco);
+    border: 2px solid #E5DCD2;
+    padding: 0.6rem 1.4rem;
+    border-radius: 30px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: var(--texto);
+    cursor: pointer;
+    transition: var(--transicion);
+}
+
+.dia-btn:hover {
+    border-color: var(--rojo-peru);
+    color: var(--rojo-peru);
+}
+
+.dia-btn.active {
+    background: var(--rojo-peru);
+    color: var(--blanco);
+    border-color: var(--rojo-peru);
+    box-shadow: 0 4px 10px rgba(183, 28, 28, 0.25);
+}
+
+.dia-content {
+    display: none;
+    animation: fadeIn 0.4s ease;
+}
+
+.dia-content.active {
+    display: block;
+}
+
+.dia-header-banner {
+    background: #F4EBE1;
+    padding: 1.25rem 2rem;
+    border-radius: var(--radio);
+    margin-bottom: 2rem;
+    border-left: 6px solid var(--rojo-peru);
+}
+
+.dia-header-banner h3 {
+    color: var(--rojo-peru);
+    font-size: 1.4rem;
+    margin-bottom: 0.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.platos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+.plato-card {
+    background: var(--blanco);
+    border-radius: var(--radio);
+    overflow: hidden;
+    box-shadow: var(--sombra);
+    transition: var(--transicion);
+    display: flex;
+    flex-direction: column;
+}
+
+.plato-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--sombra-fuerte);
+}
+
+.plato-info {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.plato-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.75rem;
+    gap: 1rem;
+}
+
+.plato-header h4 {
+    font-size: 1.2rem;
+    line-height: 1.3;
+}
+
+.precio {
+    color: var(--rojo-peru);
+    font-weight: 700;
+    font-size: 1.15rem;
+    white-space: nowrap;
+}
+
+.plato-info p {
+    color: var(--texto-suave);
+    font-size: 0.95rem;
+    margin-bottom: 1.25rem;
+    flex-grow: 1;
+}
+
+.etiqueta {
+    align-self: flex-start;
+    background: #FAF0E6;
+    color: #A0522D;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    text-transform: uppercase;
+}
+
+/* ========================================================
+   SECCIÓN 4: RESERVAS
+======================================================== */
+.reservas-wrapper {
+    display: grid;
+    grid-template-columns: 1.3fr 0.7fr;
+    gap: 2.5rem;
+}
+
+.form-container {
+    background: var(--blanco);
+    padding: 2.5rem;
+    border-radius: var(--radio);
+    box-shadow: var(--sombra);
+}
+
+.form-group-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+    margin-bottom: 1.25rem;
+}
+
+.form-group {
+    margin-bottom: 1.25rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 0.4rem;
+    color: var(--oscuro);
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 0.85rem 1rem;
+    border: 1.5px solid #E0D7CC;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    transition: var(--transicion);
+    background-color: #FAF8F5;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--rojo-peru);
+    background-color: var(--blanco);
+    box-shadow: 0 0 0 3px rgba(183, 28, 28, 0.1);
+}
+
+.oculto {
+    display: none;
+}
+
+.mensaje-exito {
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.mensaje-exito i {
+    font-size: 4rem;
+    color: #2E7D32;
+    margin-bottom: 1rem;
+}
+
+.mensaje-exito h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.75rem;
+}
+
+.mensaje-exito p {
+    color: var(--texto-suave);
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+}
+
+.info-reserva-card {
+    background: var(--blanco);
+    padding: 2rem;
+    border-radius: var(--radio);
+    box-shadow: var(--sombra);
+    height: fit-content;
+}
+
+.info-reserva-card h3 {
+    margin-bottom: 1.25rem;
+    font-size: 1.3rem;
+    color: var(--rojo-peru);
+}
+
+.info-reserva-card ul {
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+.info-reserva-card li {
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+}
+
+.info-reserva-card li i {
+    color: var(--dorado);
+    margin-top: 0.3rem;
+}
+
+.contacto-directo {
+    background: #E8F5E9;
+    padding: 1.2rem;
+    border-radius: 8px;
+    border-left: 4px solid #2E7D32;
+}
+
+.contacto-directo h4 {
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+    color: #1B5E20;
+}
+
+.contacto-directo p {
+    font-size: 0.95rem;
+    color: #2E7D32;
+}
+
+/* ========================================================
+   FOOTER
+======================================================== */
+.footer {
+    background: var(--oscuro);
+    color: #A0A0A0;
+    padding: 2.5rem 1.5rem;
+    margin-top: 4rem;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-size: 0.9rem;
+}
+
+.sociales {
+    display: flex;
+    gap: 1.25rem;
+}
+
+.sociales a {
+    color: #FFFFFF;
+    font-size: 1.25rem;
+    transition: var(--transicion);
+}
+
+.sociales a:hover {
+    color: var(--rojo-claro);
+    transform: scale(1.1);
+}
+
+/* ========================================================
+   RESPONSIVE DESIGN (MÓVILES Y TABLETS)
+======================================================== */
+@media (max-width: 900px) {
+    .about-container,
+    .reservas-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .form-group-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-tabs {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .tab-btn {
+        padding: 0.5rem 0.9rem;
+        font-size: 0.85rem;
+    }
+
+    .hero-banner {
+        padding: 2.5rem 1.5rem;
+    }
+
+    .hero-text h2 {
+        font-size: 2rem;
+    }
+
+    .about-highlights {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ========================================================
+   ESTILOS DE IMÁGENES DEL MENÚ Y LOCAL
+======================================================== */
+.plato-img-container {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    background-color: #EFE8E1;
+}
+
+.plato-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.plato-card:hover .plato-img {
+    transform: scale(1.08);
+}
+
+.badge-card {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: rgba(183, 28, 28, 0.9);
+    color: #FFFFFF;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.35rem 0.8rem;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+    backdrop-filter: blur(4px);
+}
+
+.img-wrapper-about {
+    width: 100%;
+    height: 320px;
+    overflow: hidden;
+    border-radius: var(--radio);
+    box-shadow: var(--sombra);
+}
+
+.about-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.about-image-card:hover .about-img {
+    transform: scale(1.04);
+}
+
+/* ========================================================
+   NAVEGACIÓN ENTRE PÁGINAS (enlaces) Y ERRORES DE FORMULARIO
+======================================================== */
+.logo,
+.tab-btn,
+.btn {
+    text-decoration: none;
+}
+
+.error-form {
+    color: var(--rojo-peru);
+    font-size: 0.85rem;
+    margin-top: 0.3rem;
+}
+
+.error-form:empty {
+    display: none;
+}
+
+.form-group option:disabled {
+    color: #AAAAAA;
+}

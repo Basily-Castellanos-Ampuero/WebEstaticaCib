@@ -1,0 +1,39 @@
+# Sabores del Perú - Sitio Web de un Restaurante
+
+Proyecto web básico (solo HTML, CSS y JavaScript) que simula la página de un restaurante de comida criolla y marina peruana, con menú semanal y reserva de mesa.
+
+Para verlo, abre `index.html` con doble clic. No necesita instalación.
+Para entender cómo funciona cada parte, lee `GUIA.md`.
+
+## 📁 Estructura del Proyecto
+- `index.html`: Página de Inicio.
+- `nosotros.html`: Página con la historia, ubicación, teléfonos y horarios del restaurante.
+- `menu.html`: Página del Menú Semanal de lunes a domingo.
+- `reservas.html`: Página con el formulario de reservas.
+- `css/estilos.css`: Estilos visuales (tonos rojizos, cálidos y dorados), responsive para móviles, tablets y computadoras.
+- `js/script.js`: Lógica del menú por días y del formulario de reservas (validación de fecha y hora, y mensaje de confirmación).
+- `Imagenes del menu/`: Fotografías de los platos de lunes a miércoles.
+- `GUIA.md`: Explicación del funcionamiento para alumnos que están aprendiendo.
+
+Cada página es un archivo HTML independiente. Se navega entre ellas con los enlaces del menú superior.
+
+## 🥘 Páginas Incluidas:
+1. **Inicio:** Banner de bienvenida, botones hacia el menú y las reservas, y tarjetas con los pilares del restaurante.
+2. **Nosotros:** Descripción del restaurante, historia, datos de ubicación, teléfonos y horarios de atención.
+3. **Menú Semanal (Lunes a Domingo):** Botones por día; se muestra un día a la vez.
+   - **Lunes:** Lentejitas criollas, Ají de gallina y Papa rellena.
+   - **Martes:** Carapulcra con sopa seca chinchana, Cau cau y Ocopa arequipeña.
+   - **Miércoles:** Lomo saltado, Arroz chaufa y Tequeños.
+   - **Jueves:** Seco de cabrito a la norteña, Arroz con pato y Tamalitos verdes.
+   - **Viernes:** Ceviche mixto, Jalea mixta crujiente y Arroz con mariscos.
+   - **Sábado:** Anticuchos al carbón, Tacu tacu con lomo y Trilogía de causas.
+   - **Domingo:** Pachamanca a la olla, Chicharrón de cerdo y Mazamorra/Arroz con leche.
+4. **Reservas:** Formulario para registrar nombre, contacto, número de personas, fecha, hora y solicitudes especiales.
+   - No permite fechas pasadas.
+   - Si la reserva es para hoy, deshabilita las horas que ya pasaron.
+   - Muestra la confirmación con la fecha y la hora en formato legible (por ejemplo: "miércoles, 14 de octubre de 2026 a las 7:00 p. m.").
+   - Es una simulación: no guarda ni envía la reserva.
+
+## ℹ️ Notas
+- Las fuentes, los iconos y las imágenes del menú de jueves a domingo se cargan desde internet. Sin conexión no se verán.
+- El encabezado y el pie de página están repetidos en cada HTML. Si los cambias, hazlo en las cuatro páginas.

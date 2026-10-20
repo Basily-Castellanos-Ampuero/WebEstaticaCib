@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Semanal - Sabores del Perú</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Encabezado y Navegación Principal -->
+    <header class="header">
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-utensils"></i>
+                <h1>Sabores del Perú</h1>
+            </a>
+            <nav class="nav-tabs">
+                <a href="index.html" class="tab-btn">
+                    <i class="fa-solid fa-house"></i> Inicio
+                </a>
+                <a href="nosotros.html" class="tab-btn">
+                    <i class="fa-solid fa-book-open"></i> Nosotros
+                </a>
+                <a href="menu.html" class="tab-btn active">
+                    <i class="fa-solid fa-bowl-food"></i> Menú Semanal
+                </a>
+                <a href="reservas.html" class="tab-btn">
+                    <i class="fa-solid fa-calendar-check"></i> Reservas
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section id="menu" class="tab-content active">
+            <div class="section-header">
+                <h2>Menú Tradicional de Lunes a Domingo</h2>
+                <p>Haz clic en cada día de la semana para explorar los platos más representativos con sus fotos, ingredientes y precios.</p>
+            </div>
+
+            <!-- Subpestañas por día -->
+            <div class="dias-nav">
+                <button class="dia-btn active" data-dia="lunes">Lunes</button>
+                <button class="dia-btn" data-dia="martes">Martes</button>
+                <button class="dia-btn" data-dia="miercoles">Miércoles</button>
+                <button class="dia-btn" data-dia="jueves">Jueves</button>
+                <button class="dia-btn" data-dia="viernes">Viernes</button>
+                <button class="dia-btn" data-dia="sabado">Sábado</button>
+                <button class="dia-btn" data-dia="domingo">Domingo</button>
+            </div>
+
+            <!-- Contenidos por día -->
+            <div class="menu-dias-container">
+                <!-- LUNES -->
+                <div id="lunes" class="dia-content active">
+                    <div class="dia-header-banner">
+                        <h3><i class="fa-solid fa-calendar-day"></i> Lunes Criollo de Lentejitas</h3>
+                        <p>La infaltable costumbre peruana para empezar la semana con prosperidad, energía y sazón criolla.</p>
+                    </div>
+                    <div class="platos-grid">
+                        <div class="plato-card">
+                            <div class="plato-img-container">
+                                <img src="Imagenes del menu/Lunes/Seco-de-res-peruano-.webp" alt="Lentejas Criollas con Seco de Res" class="plato-img">
+                                <span class="badge-card">Plato del Día</span>
+                            </div>
+                            <div class="plato-info">
+                                <div class="plato-header">
+                                    <h4>Lentejas Criollas con Seco de Res</h4>
+                                    <span class="precio">S/ 32.00</span>
+                                </div>
+                                <p>Lentejitas cocidas a fuego lento con aderezo casero, tocino ahumado, acompañadas de seco de res al culantro y arroz blanco.</p>
+                                <span class="etiqueta">Tradición de Lunes</span>
+                            </div>
+                        </div>
+                        <div class="plato-card">
+                            <div class="plato-img-container">
+                                <img src="Imagenes del menu/Lunes/aji-de-gallina.jpg" alt="Ají de Gallina Tradicional" class="plato-img">
+                                <span class="badge-card">Favorito</span>
+                            </div>
+                            <div class="plato-info">
+                                <div class="plato-header">
+                                    <h4>Ají de Gallina Tradicional</h4>
+                                    <span class="precio">S/ 28.00</span>
+                                </div>
+                                <p>Cremosa salsa de ají amarillo y nueces con pechuga deshilachada, papa amarilla huamantanga, huevo duro y aceituna botija.</p>
+                                <span class="etiqueta">Clásico Criollo</span>
+                            </div>
+                        </div>
+                        <div class="plato-card">
+                            <div class="plato-img-container">
+                                <img src="Imagenes del menu/Lunes/papa rellena.jfif" alt="Papa Rellena Criolla" class="plato-img">
+                                <span class="badge-card">Entrada</span>
+                            </div>
+                            <div class="plato-info">
+                                <div class="plato-header">
+                                    <h4>Papa Rellena con Sarsa Criolla</h4>
+                                    <span class="precio">S/ 18.00</span>
+                                </div>
+                                <p>Crocante masa de papa amarilla rellena de picadillo de lomo, pasas, huevo y servida con abundante salsa criolla recién picada.</p>
+                                <span class="etiqueta">Entrada Caliente</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MARTES -->
+                <div id="martes" class="dia-content">
+                    <div class="dia-header-banner">
+                        <h3><i class="fa-solid fa-calendar-day"></i> Martes de Tradición y Fogón</h3>
+                        <p>Sabores de antaño que rescatan los mejores guisos de las tradicionales picanterías del Perú.</p>
+                    </div>
+                    <div class="platos-grid">
+                        <div class="plato-card">
+                            <div class="plato-img-container">
+                                <img src="Imagenes del menu/Martes/Sopa seca carapulcra.jfif" alt="Carapulcra con Sopa Seca" class="plato-img">
+                                <span class="badge-card">Especial</span>
+                            </div>
+                            <div class="plato-info">
+                                <div class="plato-header">
+                                    <h4>Carapulcra con Sopa Seca Chinchana</h4>
+                                    <span class="precio">S/ 36.00</span>
+                                </div>
+                                <p>Papa seca guisada con maní tostado, carne de chancho y ajíes especiales, servida con fideos sazonados al estilo chinchano.</p>
+                                <span class="etiqueta">Especial del Sur</span>
+                            </div>
+                        </div>
+                        <div class="plato-card">
+                            <div class="plato-img-container">
+                                <img src="Imagenes del menu/Martes/Cau cau.webp" alt="Cau Cau a la Limeña" class="plato-img">
+                                <span class="badge-card">Típico</span>
+                            </div>
+                            <div class="plato-info">
+                                <div class="plato-header">
+                                    <h4>Cau Cau a la Limeña</h4>
+                                    <span class="precio">S/ 26.00</span>
+                                </div>
+                                <p>Mondonguito suavemente aderezado con palillo, cubitos de papa, hierbabuena fresca del huerto y arroz graneado.</p>
+                                <span class="etiqueta">Limeño Clásico</span>
+                            </div>
+                        </div>
+                        <div class="plato-card">
+                            <div class="plato-img-container">
+                                <img src="Imagenes del menu/Martes/ocopa arequipeña.avif" alt="Ocopa Arequipeña" class="plato-img">
+                                <span class="badge-card">Entrada</span>
+                            </div>
+                            <div class="plato-info">
+                                <div class="plato-header">
+                                    <h4>Ocopa Arequipeña Tradicional</h4>
+                                    <span class="precio">S/ 16.00</span>
+                                </div>
+                                <p>Papas hervidas bañadas en crema de huacatay, queso paria, ají mirasol y maní tostado con huevo y aceituna negra.</p>
+                                <span class="etiqueta">Arequipa Tradición</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MIÉRCOLES -->
+                <div id="miercoles" class="dia-content">
+                    <div class="dia-header-banner">
+                        <h3><i class="fa-solid fa-calendar-day"></i> Miércoles de Fusión y Salteados</h3>
+                        <p>El fuego vivo del wok y la herencia cantonesa-peruana que conquistó el mundo.</p>
+                    </div>
+                    <div class="platos-grid">
+                        <div class="plato-card">
+                            <div class="plato-img-container">
+                                <img src="Imagenes del menu/Miercoles/LOMO-SALTADO-scaled.jpg" alt="Lomo Saltado Criollo" class="plato-img">
+                                <span class="badge-card">Estrella</span>
+                            </div>
+                            <div class="plato-info">
+                                <div class="plato-header">
+                                    <h4>Lomo Saltado Criollo al Wok</h4>
+                                    <span class="precio">S/ 38.00</span>
+                                </div>
+                                <p>Jugosos cubos de lomo fino salteados al fuego vivo con cebolla roja, tomate, ají amarillo, papas fritas crocantes y arroz con choclo.</p>
+                                <span class="etiqueta">Orgullo Nacional</span>
+                            </div>
+                        </div>
+                        <div class="plato-card">
+                            <div class="plato-img-container">
+                                <img src="Imagenes del menu/Miercoles/CHAUFA.png" alt="Arroz Chaufa Especial" class="plato-img">
+                                <span class="badge-card">Fusión</span>
+                            </div>
+                            <div class="plato-info">
+                                <div class="plato-header">
+                                    <h4>Arroz Chaufa Especial de Pollo y Cerdo</h4>
+                                    <span class="precio">S/ 29.00</span>
+                                </div>
+                                <p>Salteado al wok con sillao oscuro, kion, cebollita china, tortilla picada y gotas de aceite de ajonjolí aromático.</p>
+                                <span class="etiqueta">Fusión Chifa</span>
+                            </div>
+                        </div>
+                        <div class="plato-card">
+                            <div class="plato-img-container">
+                                <img src="Imagenes del menu/Miercoles/tequeños.jfif" alt="Tequeños con Guacamole" class="plato-img">
+                                <span class="badge-card">Piqueo</span>
+                            </div>
+                            <div class="plato-info">
+                                <div class="plato-header">
+                                    <h4>Tequeños Rellenos con Guacamole</h4>
+                                    <span class="precio">S/ 19.00</span>
+                                </div>
+                                <p>Masa wantán dorada y crujiente rellena de queso andino y trocitos de lomo, acompañados de crema de palta fresca.</p>
+                                <span class="etiqueta">Para Picar</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- JUEVES -->
+                <div id="jueves" class="dia-content">
+                    <div class="dia-header-banner">
+                        <h3><i class="fa-solid fa-calendar-day"></i> Jueves Norteño de Sabor Criollo</h3>
+                        <p>La riqueza culinaria del norte del Perú con chicha de jora, culantro norteño y ají mochero.</p>
+                    </div>
+                    <div class="platos-grid">
+                        <div class="plato-card">
+                            <div class="plato-img-container">
+                                <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=800&q=80" alt="Seco de Cabrito a la Norteña" class="plato-img">
+                                <span class="badge-card">Norteño</span>
+                            </div>
+                            <div class="plato-info">
+                                <div class="plato-header">
+                                    <h4>Seco de Cabrito a la Norteña</h4>
+                                    <span class="precio">S/ 42.00</span>
+                                </div>
+                                <p>Cabrito tierno macerado en chicha de jora, cocinado lentamente con culantro y zapallo loche, acompañado de frejoles cremosos.</p>
+                                <span class="etiqueta">Especial Norteño</span>
+                            </div>
+                        </div>
+                        <div class="plato-card">
+                            <div class="plato-img-container">
+                                <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=800&q=80" alt="Arroz con Pato Chiclayano" class="plato-img">
+                                <span class="badge-card">Insignia</span>
+                            </div>
+                            <div class="plato-info">
+                                <div class="plato-header">
+                                    <h4>Arroz con Pato Chiclayano</h4>
+                                    <span class="precio">S/ 44.00</span>
+                                </div>
+                                <p>Presa de pato tierna sobre arroz verde aromatizado con cerveza negra, ají mirasol, culantro y salsa criolla.</p>
+                                <span class="etiqueta">Plato Insignia</span>
+                            </div>
+                        </div>
+                        <div class="plato-card">
+                            <div class="plato-img-container">
+                                <img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&w=800&q=80" alt="Tamalito Verde Piurano" class="plato-img">
+                                <span class="badge-card">Entrada</span>
+                            </div>
+                            <div class="plato-info">
+                                <div class="plato-header">
+                                    <h4>Tamalitos Verdes Piuranos</h4>
+                                    <span class="precio">S/ 15.00</span>
+                                </div>
+                                <p>Choclo tierno molido con culantro y ají amarillo, cocido al vapor en hojas de panca con sarsa de cebolla y ají limo.</p>
+                                <span class="etiqueta">Sabor Piurano</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- VIERNES -->
+                <div id="viernes" class="dia-content">
+                    <div class="dia-header-banner">
+                        <h3><i class="fa-solid fa-calendar-day"></i> Viernes de Aromas Marinos</h3>
+                        <p>Frescura directa del puerto: ceviches, jaleas y arroces marinados al instante.</p>
+                    </div>
+                    <div class="platos-grid">
+                        <div class="plato-card">
+                            <div class="plato-img-container">
+                                <img src="https://images.unsplash.com/photo-1535400255456-984241443b29?auto=format&fit=crop&w=800&q=80" alt="Ceviche Mixto Tradicional" class="plato-img">
+                                <span class="badge-card">Emblemático</span>
+                            </div>
+                            <div class="plato-info">
+                                <div class="plato-header">
+                                    <h4>Ceviche Mixto de Pescado y Mariscos</h4>
+                                    <span class="precio">S/ 39.00</span>
+                                </div>
+                                <p>Cubos de pesca del día, pulpo, calamar y langostinos marinados en limón norteño con ají limo, camote glaseado y choclo.</p>
+                                <span class="etiqueta">Patrimonio del Perú</span>
+                            </div>
+                        </div>
+                        <div class="plato-card">
+                            <div class="plato-img-container">
+                                <img src="https://images.unsplash.com/photo-1599488615731-7e5c2823ff28?auto=format&fit=crop&w=800&q=80" alt="Jalea Mixta Crujiente" class="plato-img">
+                                <span class="badge-card">Crocante</span>
+                            </div>
+                            <div class="plato-info">
+                                <div class="plato-header">
+                                    <h4>Jalea Mixta Crujiente con Tártara</h4>
+                                    <span class="precio">S/ 45.00</span>
+                                </div>
+                                <p>Mariscos y trozos de pescado fritos al punto exacto, acompañados de yucas doradas, salsa tártara de la casa y sarsa criolla.</p>
+                                <span class="etiqueta">Para Compartir</span>
+                            </div>
+                        </div>
+                        <div class="plato-card">
+                            <div class="plato-img-container">
+                                <img src="https://images.unsplash.com/photo-1559847844-5315695dadae?auto=format&fit=crop&w=800&q=80" alt="Arroz con Mariscos" class="plato-img">
+                                <span class="badge-card">Caliente</span>
+                            </div>
+                            <div class="plato-info">
+                                <div class="plato-header">
+                                    <h4>Arroz con Mariscos a la Limeña</h4>
+                                    <span class="precio">S/ 38.00</span>
+                                </div>
+                                <p>Arroz amarisolado con mixtura de mariscos flambeados con pisco acholado, vino blanco, arvejas y queso parmesano.</p>
+                                <span class="etiqueta">Sabor a Puerto</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SÁBADO -->
+                <div id="sabado" class="dia-content">
+                    <div class="dia-header-banner">
+                        <h3><i class="fa-solid fa-calendar-day"></i> Sábado de Brasas y Criollismo</h3>
+                        <p>Anticuchos al carbón, tacu tacu y la fiesta criolla para celebrar con amigos y familia.</p>
+                    </div>
+                    <div class="platos-grid">
+                        <div class="plato-card">
+                            <div class="plato-img-container">
+                                <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=800&q=80" alt="Anticuchos Tradicionales" class="plato-img">
+                                <span class="badge-card">Al Carbón</span>
+                            </div>
+                            <div class="plato-info">
+                                <div class="plato-header">
+                                    <h4>Anticuchos de Corazón (3 Palitos)</h4>
+                                    <span class="precio">S/ 27.00</span>
+                                </div>
+                                <p>Trozos de corazón de res macerados en ají panca y vinagre, asados al carbón con papa dorada, choclo tierno y rocoto carretillero.</p>
+                                <span class="etiqueta">Brasa Limeña</span>
+                            </div>
+                        </div>
+                        <div class="plato-card">
+                            <div class="plato-img-container">
+                                <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80" alt="Tacu Tacu con Lomo" class="plato-img">
+                                <span class="badge-card">Contundente</span>
+                            </div>
+                            <div class="plato-info">
+                                <div class="plato-header">
+                                    <h4>Tacu Tacu con Sábana de Lomo</h4>
+                                    <span class="precio">S/ 40.00</span>
+                                </div>
+                                <p>Dorado de frejoles canario y arroz crujiente por fuera y cremoso por dentro, cubierto con lomo apanado y huevo frito montado.</p>
+                                <span class="etiqueta">Plato Criollo</span>
+                            </div>
+                        </div>
+                        <div class="plato-card">
+                            <div class="plato-img-container">
+                                <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=800&q=80" alt="Trilogía de Causas Rellenas" class="plato-img">
+                                <span class="badge-card">Clásica</span>
+                            </div>
+                            <div class="plato-info">
+                                <div class="plato-header">
+                                    <h4>Trilogía de Causas Rellenas</h4>
+                                    <span class="precio">S/ 28.00</span>
+                                </div>
+                                <p>Papa amarilla batida con ají amarillo y limón, rellenas de pollo deshilachado, atún y pulpa de cangrejo con palta fuerte.</p>
+                                <span class="etiqueta">Entrada Fría</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DOMINGO -->
+                <div id="domingo" class="dia-content">
+                    <div class="dia-header-banner">
+                        <h3><i class="fa-solid fa-calendar-day"></i> Domingo Familiar y Pachamanquero</h3>
+                        <p>Los platos más generosos, tradicionales y festivos de la cocina peruana para compartir en familia.</p>
+                    </div>
+                    <div class="platos-grid">
+                        <div class="plato-card">
+                            <div class="plato-img-container">
+                                <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80" alt="Pachamanca a la Olla" class="plato-img">
+                                <span class="badge-card">Festivo</span>
+                            </div>
+                            <div class="plato-info">
+                                <div class="plato-header">
+                                    <h4>Pachamanca Tradicional a la Olla</h4>
+                                    <span class="precio">S/ 46.00</span>
+                                </div>
+                                <p>Tres carnes (cerdo, pollo y res) maceradas en chincho y huacatay, acompañadas de habas, papas nativas, camote y humita dulce.</p>
+                                <span class="etiqueta">Tradición Andina</span>
+                            </div>
+                        </div>
+                        <div class="plato-card">
+                            <div class="plato-img-container">
+                                <img src="https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?auto=format&fit=crop&w=800&q=80" alt="Chicharrón de Cerdo Criollo" class="plato-img">
+                                <span class="badge-card">Dominical</span>
+                            </div>
+                            <div class="plato-info">
+                                <div class="plato-header">
+                                    <h4>Chicharrón Criollo de Panceta</h4>
+                                    <span class="precio">S/ 36.00</span>
+                                </div>
+                                <p>Panceta crujiente por fuera y jugosa por dentro, servida con camotes fritos dorados, salsa criolla con hierbabuena y panes franceses.</p>
+                                <span class="etiqueta">Sabor Dominical</span>
+                            </div>
+                        </div>
+                        <div class="plato-card">
+                            <div class="plato-img-container">
+                                <img src="https://images.unsplash.com/photo-1587314168485-3236d6710814?auto=format&fit=crop&w=800&q=80" alt="Mazamorra Morada y Arroz con Leche" class="plato-img">
+                                <span class="badge-card">Postre</span>
+                            </div>
+                            <div class="plato-info">
+                                <div class="plato-header">
+                                    <h4>Clásico Combinado "Sol y Sombra"</h4>
+                                    <span class="precio">S/ 16.00</span>
+                                </div>
+                                <p>El dúo limeño por excelencia: mazamorra morada con canela y frutas secas, acompañada de cremoso arroz con leche perfumado.</p>
+                                <span class="etiqueta">Postre de Antaño</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de Página -->
+    <footer class="footer">
+        <div class="footer-container">
+            <p>&copy; 2026 Sabores del Perú - Todos los derechos reservados. Cocina con orgullo e identidad.</p>
+            <div class="sociales">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
